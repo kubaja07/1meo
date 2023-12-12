@@ -1,0 +1,443 @@
+
+                            <!DOCTYPE html>
+                            <html lang="cs">
+                            <head>
+                                <meta charset="UTF-8">
+                                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                <title>1MEO</title>
+
+                                <link rel="stylesheet" type="text/css" href="css/main.css">
+                                <link rel="stylesheet" type="text/css" href="css/karticky.css">
+                              <link rel="preconnect" href="https://fonts.googleapis.com">
+                              <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                              <link href="https://fonts.googleapis.com/css2?family=Coiny&family=Oswald:wght@300&display=swap" rel="stylesheet">
+                              <script src="script.js"></script>
+
+                              <meta property="og:image" content="fotky/Výstřižek.PNG">
+                              <meta property="og:title" content="1MEO-Rozvrh">
+                              <meta property="og:description" content="">
+
+                              <style>
+                                /* Základní styl pro tabulku */
+                                table {
+                                    width: 100%;
+                                    border-collapse: collapse;
+                                }
+
+                                /* Styl pro ohraničení tabulky, buněk a zvýraznění aktuální hodiny */
+                                table, th, td {
+                                    border: 1px solid #000;
+                                }
+
+                                /* Styl pro text v buňkách tabulky */
+                                th, td {
+                                    padding: 15px; /* Větší vnitřní odsazení pro lepší čitelnost */
+                                    text-align: center;
+                                }
+
+                                /* Styl pro nadpis h1 */
+                                h1 {
+                                    font-size: 24px; /* Zvětšení velikosti nadpisu */
+                                    text-align: center;
+                                    margin: 20px 0; /* Větší mezera nad a pod nadpisem */
+                                }
+
+                                /* Zvýraznění aktuální hodiny */
+                                .current-hour {
+                                    background-color: #ffd500;
+                                    font-weight: bold; /* Přidání tučného textu pro zvýraznění */
+                                    color: #333; /* Barva textu pro lepší čitelnost na žlutém pozadí */
+                                    border: 2px solid #ffab00; /* Tlustší ohraničení pro zvýraznění */
+                                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Stín pro zvýraznění */
+                                    transition: background-color 0.3s ease; /* Plynulá změna barvy */
+                                }
+
+                                /* Odrovnání řádků s lichými čísly */
+                                tr:nth-child(odd) {
+                                    background-color: #f2f2f2;
+                                }
+
+                                /* Odrovnání řádků s sudými čísly */
+                                tr:nth-child(even) {
+                                    background-color: #fff;
+                                }
+                                table {
+                                  width: 100%;
+                                  border-collapse: collapse;
+                                  margin-bottom: 20px;
+                                }
+
+                                th, td {
+                                  border: 1px solid #ddd;
+                                  padding: 10px;
+                                  text-align: center;
+                                }
+
+                                th {
+                                  background-color: #007bff;
+                                  color: #fff;
+                                }
+
+                                tr:nth-child(even) {
+                                  background-color: #f2f2f2;
+                                }
+
+                                tr:hover {
+                                  background-color: #e0e0e0;
+                                }
+
+
+                              </style>
+
+                                <script>
+                                    setInterval(function() {
+                                        location.reload();
+                                    }, 10000); // 10000 ms = 10 sekund
+                                </script>
+
+
+
+                            </head>
+
+                            <body>
+                              <nav>
+                                <div class="navbar">
+                                  <div class="container nav-container">
+                                      <input class="checkbox" type="checkbox" name="" id="" />
+                                      <div class="hamburger-lines">
+                                        <span class="line line1"></span>
+                                        <span class="line line2"></span>
+                                        <span class="line line3"></span>
+                                      </div>  
+                                    <div class="logo">
+                                      <h1>1Meo</h1>
+                                    </div>
+                                    <div class="menu-items">
+                                      <li><a href="index.html">Domov</a></li>
+                                      <li><a href="ukoly.html">Úkoly</a></li>
+                                      <li><a href="testy.html">Testy</a></li>
+                                      <li><a href="ostatni.html">Ostatní</a></li>
+                                      <li><a href="https://1testmeo.jarolim.repl.co">Testovací web</a></li>
+                                    </div>
+                                  </div>
+                                </div>
+                              </nav>
+                            <body>
+
+                             <div class="container mt-4">
+                                    <section id="poznamky">
+                                        <h2>Prostě rozvrh.</h2>
+
+                                        <div class="d-flex flex-wrap">
+                                          <table>
+                                              <tr>
+                                                  <th></th>
+                                                  <th>Pondělí</th>
+                                                  <th>Úterý</th>
+                                                  <th>Středa</th>
+                                                  <th>Čtvrtek</th>
+                                                  <th>Pátek</th>
+                                              </tr>
+                                            <tr>
+                                                <td>7:10 - 7:55</td>
+                                                <td>OV</td>
+                                                <td>OV</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>Čj</td>
+                                            </tr>
+                                              <tr>
+                                             <td>23:00 - 00:00</td>                      
+                                                  <td>OV</td>
+                                                  <td>OV</td>
+                                                  <td>Ma</td>
+                                                  <td>Tv</td>
+                                                  <td>Ce</td>
+                                              </tr>
+                                            <tr>
+                                                <td>8:55 - 9:40</td>
+                                                <td>OV</td>
+                                                <td>OV</td>
+                                                <td>De</td>
+                                                <td>TV</td>
+                                                <td>De</td>
+                                            </tr>
+                                            <tr>
+                                                <td>9:55 - 10:40</td>
+                                                <td>OV</td>
+                                                <td>OV</td>
+                                                <td>Zel</td>
+                                                <td>Zel</td>
+                                                <td>Zel</td>
+                                            </tr>
+                                            <tr>
+                                                <td>10:50 - 11:35</td>
+                                                <td>OV</td>
+                                                <td>OV</td>
+                                                <td>Td</td>
+                                                <td>Ma</td>
+                                                <td>AJ</td>
+                                            </tr>
+                                            <tr>
+                                                <td>11:45 - 12:30</td>
+                                                <td>OV</td>
+                                                <td>OV</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>12:40 - 13:25</td>
+                                                <td>OV</td>
+                                                <td>OV</td>
+                                                <td>Zel</td>
+                                                <td>Ma</td>
+                                                <td>Fy</td>
+                                            </tr>
+                                            <tr>
+                                                <td>13:35 - 14:20</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>Aj</td>
+                                                <td>Ma</td>
+                                                <td>Ce</td>
+                                            </tr>
+                                            <tr>
+                                                <td>14:30 - 15:15</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>Fy</td>
+                                                <td>Čj</td>
+                                                <td>Fy</td>
+                                            </tr>
+                                              <tr>
+                                                  <td>15:25 - 16:10</td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                              </tr>
+                                          </table>
+                                          <p></p><p></p>
+                                          <p></p><p></p>
+                                          <p></p><p></p>
+                                          <p></p><p></p>  <p></p><p></p>
+                                          <p></p><p></p>
+                                          <p></p><p></p>
+                                          <table>
+                                              <tr>
+                                                  <th></th>
+                                                  <th>Pondělí</th>
+                                                  <th>Úterý</th>
+                                                  <th>Středa</th>
+                                                  <th>Čtvrtek</th>
+                                                  <th>Pátek</th>
+                                              </tr>
+                                              <tr>
+                                                  <td>8:00 - 8:45</td>
+                                                  <td>Mt</td>
+                                                  <td>Ma</td>
+                                                  <td>Aj</td>
+                                                  <td>Ma</td>
+                                                  <td>Tv</td>
+                                              </tr>
+                                            <tr>
+                                                <td>8:55 - 9:40</td>
+                                                <td>Mt</td>
+                                                <td>Zel</td>
+                                                <td>De</td>
+                                                <td>Td</td>
+                                                <td>Tv</td>
+                                            </tr>
+                                            <tr>
+                                                <td>9:55 - 10:40</td>
+                                                <td>Zel</td>
+                                                <td>Ma</td>
+                                                <td>Fy</td>
+                                                <td>Zel</td>
+                                                <td>Aj</td>
+                                            </tr>
+                                            <tr>
+                                                <td>10:50 - 11:35</td>
+                                                <td>Cj</td>
+                                                <td>Aj</td>
+                                                <td>Fy</td>
+                                                <td>Ma</td>
+                                                <td>Aj</td>
+                                            </tr>
+                                            <tr>
+                                                <td>11:45 - 12:30</td>
+                                                <td>It/1</td>
+                                                <td>It/1</td>
+                                                <td>Zel</td>
+                                                <td>It/2</td>
+                                                <td>It/2</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12:40 - 13:25</td>
+                                                <td>It/2</td>
+                                                <td>It/2</td>
+                                                <td></td>
+                                                <td>It/1</td>
+                                                <td>It/1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>13:35 - 14:20</td>
+                                                <td>Td</td>
+                                                <td>Mt</td>
+                                                <td>Zel</td>
+                                                <td>Cj</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>14:30 - 15:15</td>
+                                                <td>Td</td>
+                                                <td>Mt</td>
+                                                <td>Zel</td>
+                                                <td>De</td>
+                                                <td></td>
+                                            </tr>
+                                              <tr>
+                                                  <td>15:25 - 16:10</td>
+                                                  <td>Fyzika</td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                              </tr>
+                                          </table>
+
+
+
+
+
+                                          <p><br></p>
+                                                <p><br></p>
+                                             <p><br></p>
+                                              <p><br></p>
+                                             <p><br></p>
+                                              <p><br></p>
+                                             <p><br></p>
+                                              <p><br></p>
+                                             <p><br></p>
+                                              <p><br></p>
+                                             <p><br></p>
+                                                <p><br></p>
+                                             <p><br></p>
+                                              <p><br></p>
+                                             <p><br></p>
+                                              <p><br></p>
+                                             <p><br></p>
+                                              <p><br></p>
+                                             <p><br></p>
+                                              <p><br></p>
+                                             <p><br></p>
+                                                <p><br></p>
+                                             <p><br></p>
+                                              <p><br></p>
+                                             <p><br></p>
+                                              <p><br></p>
+                                             <p><br></p>
+                                              <p><br></p>
+                                             <p><br></p>
+                                              <p><br></p>
+
+                                              <p><br></p>
+                                                 <p><br></p>
+                                              <p><br></p>
+                                               <p><br></p>
+                                              <p><br></p>
+                                               <p><br></p>
+                                              <p><br></p>
+                                               <p><br></p>
+                                              <p><br></p>
+                                               <p><br></p>
+
+
+                                                <footer>
+                                                  <style>
+                                                    /* Add this CSS to your existing styles or in a separate stylesheet */
+
+                                                    footer {
+                                                        background-color: #949c94;
+                                                        color: #fff;
+                                                        padding: 50px 0;
+                                                    }
+
+                                                    .container {
+                                                        max-width: 1200px;
+                                                        margin: 0 auto;
+                                                    }
+
+                                                    .row {
+                                                        display: flex;
+                                                        flex-wrap: wrap;
+                                                        justify-content: space-between;
+                                                    }
+
+                                                    .col {
+                                                        flex: 0 0 100%;
+                                                        box-sizing: border-box;
+                                                        padding: 0 15px;
+                                                    }
+
+                                                    .item {
+                                                        margin-bottom: 20px;
+                                                    }
+
+                                                    h3 {
+                                                        color: #fff;
+                                                    }
+
+                                                    ul {
+                                                        list-style: none;
+                                                        padding: 0;
+                                                    }
+
+                                                    ul li {
+                                                        margin-bottom: 8px;
+                                                    }
+
+                                                    .text {
+                                                        line-height: 1.6;
+                                                    }
+
+                                                    .social a {
+                                                        color: #fff;
+                                                        margin-right: 15px;
+                                                        font-size: 24px;
+                                                    }
+
+                                                    .copyright {
+                                                        margin-top: 20px;
+                                                    }
+                                                    </style>
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-sm-6 col-md-3 item">
+                                                                <h3>Menu</h3>
+                                                                <ul>
+                                                                  <li><a href="index.html">Domov</a></li>
+                                                                  <li><a href="ukoly.html">Úkoly</a></li>
+                                                                  <li><a href="testy.html">Testy</a></li>
+                                                                  <li><a href="ostatni.html">Ostatní</a></li>
+                                                                  <li><a href="https://1meo.jimdofree.com/úkoly/">Beta web</a></li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="col-sm-6 col-md-3 item">
+                                                                <h3>Odkazy</h3>
+                                                                <ul>
+                                                                    <li><a href="https://copth.cz">Škola</a></li>
+                                                                    <li><a href="https://tarabec.com">Tarabec</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <p class="copyright"><li><a href="https://kubaja.jarolim.repl.co">Jakub Jarolim © 2023</a></li></p>
+                                                    </div>
+                                                </footer>
+                                              </div>
+
+                                          </body>
+
+                                          </html>

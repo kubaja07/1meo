@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <title>Welcome</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <!-- ... (předchozí kód) ... -->
+        </div>
+    </div>
+    <div class="welcome-content">
+        <h1>1MEO</h1>
+        <p>2023-2027</p>
+        <div id="countdown"></div>
+        <div id="button-container" style="display: none;">
+            <a href="domov.html" class="welcome-button">Vstoupit</a>
+          
+        </div>
+    </div>
+
+    <script>
+       
+        var targetDate = new Date('2023-11-16T11:00:00Z');
+
+        
+        var currentDate = new Date();
+
+      
+        if (currentDate > targetDate) {
+            document.getElementById('button-container').style.display = 'block';
+        } else {
+            
+            var countdownTime = Math.floor((targetDate - currentDate) / 1000);
+            startCountdown();
+        }
+
+        
+        function startCountdown() {
+            var countdownElement = document.getElementById('countdown');
+            var buttonContainer = document.getElementById('button-container');
+
+            var countdownInterval = setInterval(function () {
+                var days = Math.floor(countdownTime / (3600 * 24));
+                var hours = Math.floor((countdownTime % (3600 * 24)) / 3600);
+                var minutes = Math.floor((countdownTime % 3600) / 60);
+                var seconds = countdownTime % 60;
+
+                countdownElement.textContent = 'Odpočet: ' + days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's';
+
+                if (countdownTime <= 0) {
+                    clearInterval(countdownInterval);
+                    countdownElement.textContent = 'Countdown finished!';
+                    buttonContainer.style.display = 'block'; // Zobrazit tlačítko
+                }
+
+                countdownTime--;
+            }, 1000); // Aktualizovat každou sekundu
+        }
+    </script>
+</body>
+</html>
